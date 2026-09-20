@@ -1,0 +1,19 @@
+pull_request_rules:
+  - name: VM3 stale repository full name OLD
+    conditions:
+      - title = VM3 REPOSITORY FULL NAME RENAME 260920
+      - repository-full-name = livastic-vm3-mergify-lab-0911/vm3-repo-name-cond-old-260920
+      - -label = vm3-reponame-old-260920
+    actions:
+      label:
+        add:
+          - vm3-reponame-old-260920
+  - name: VM3 fresh repository full name NEW
+    conditions:
+      - title = VM3 REPOSITORY FULL NAME RENAME 260920
+      - repository-full-name = livastic-vm3-mergify-lab-0911/vm3-repo-name-cond-new-260920
+      - -label = vm3-reponame-new-260920
+    actions:
+      label:
+        add:
+          - vm3-reponame-new-260920
